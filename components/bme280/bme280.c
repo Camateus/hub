@@ -1,56 +1,3 @@
-/*
-****************************************************************************
-* Copyright (C) 2015 - 2016 Bosch Sensortec GmbH
-*
-* bme280.c
-* Date: 2016/07/04
-* Revision: 2.0.5(Pressure and Temperature compensation code revision is 1.1
-*               and Humidity compensation code revision is 1.0)
-*
-* Usage: Sensor Driver file for BME280 sensor
-*
-****************************************************************************
-* License:
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*   Redistributions of source code must retain the above copyright
-*   notice, this list of conditions and the following disclaimer.
-*
-*   Redistributions in binary form must reproduce the above copyright
-*   notice, this list of conditions and the following disclaimer in the
-*   documentation and/or other materials provided with the distribution.
-*
-*   Neither the name of the copyright holder nor the names of the
-*   contributors may be used to endorse or promote products derived from
-*   this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
-* CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
-* IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER
-* OR CONTRIBUTORS BE LIABLE FOR ANY
-* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
-* OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO,
-* PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-* HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-* WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-* ANY WAY OUT OF THE USE OF THIS
-* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
-*
-* The information provided is believed to be accurate and reliable.
-* The copyright holder assumes no responsibility
-* for the consequences of use
-* of such information nor for any infringement of patents or
-* other rights of third parties which may result from its use.
-* No license is granted by implication or otherwise under any patent or
-* patent rights of the copyright holder.
-**************************************************************************/
-
 #include "bme280.h"
 static struct bme280_t *p_bme280; /**< pointer to BME280 */
 
@@ -2012,14 +1959,14 @@ double bme280_compensate_pressure_double(s32 v_uncom_pressure_s32) {
 	v_x1_u32 = ((double)p_bme280->cal_param.t_fine /
 	            2.0) -
 	           64000.0;
-	v_x2_u32 = v_x1_u32 *v_x1_u32 *
+	v_x2_u32 = v_x1_u32 * v_x1_u32 *
 	           ((double)p_bme280->cal_param.dig_P6) / 32768.0;
 	v_x2_u32 = v_x2_u32 + v_x1_u32 *
 	           ((double)p_bme280->cal_param.dig_P5) * 2.0;
 	v_x2_u32 = (v_x2_u32 / 4.0) +
 	           (((double)p_bme280->cal_param.dig_P4) * 65536.0);
 	v_x1_u32 = (((double)p_bme280->cal_param.dig_P3) *
-	            v_x1_u32 *v_x1_u32 / 524288.0 +
+	            v_x1_u32 * v_x1_u32 / 524288.0 +
 	            ((double)p_bme280->cal_param.dig_P2) * v_x1_u32) /
 	           524288.0;
 	v_x1_u32 = (1.0 + v_x1_u32 / 32768.0) *
@@ -2031,7 +1978,7 @@ double bme280_compensate_pressure_double(s32 v_uncom_pressure_s32) {
 	else
 		return BME280_INVALID_DATA;
 	v_x1_u32 = ((double)p_bme280->cal_param.dig_P9) *
-	           pressure *pressure / 2147483648.0;
+	           pressure * pressure / 2147483648.0;
 	v_x2_u32 = pressure * ((double)p_bme280->cal_param.dig_P8) / 32768.0;
 	pressure = pressure + (v_x1_u32 + v_x2_u32 +
 	                       ((double)p_bme280->cal_param.dig_P7)) /
@@ -2097,7 +2044,7 @@ u32 bme280_compensate_pressure_int64(s32 v_uncom_pressure_s32) {
 	s64 pressure = BME280_INIT_VALUE;
 
 	v_x1_s64r = ((s64)p_bme280->cal_param.t_fine) - 128000;
-	v_x2_s64r = v_x1_s64r *v_x1_s64r *
+	v_x2_s64r = v_x1_s64r * v_x1_s64r *
 	            (s64)p_bme280->cal_param.dig_P6;
 	v_x2_s64r = v_x2_s64r + ((v_x1_s64r *
 	                          (s64)p_bme280->cal_param.dig_P5)
@@ -2105,7 +2052,7 @@ u32 bme280_compensate_pressure_int64(s32 v_uncom_pressure_s32) {
 	v_x2_s64r = v_x2_s64r +
 	            (((s64)p_bme280->cal_param.dig_P4)
 	             << BME280_SHIFT_BIT_POSITION_BY_35_BITS);
-	v_x1_s64r = ((v_x1_s64r *v_x1_s64r *
+	v_x1_s64r = ((v_x1_s64r * v_x1_s64r *
 	              (s64)p_bme280->cal_param.dig_P3) >>
 	             BME280_SHIFT_BIT_POSITION_BY_08_BITS) +
 	            ((v_x1_s64r * (s64)p_bme280->cal_param.dig_P2)

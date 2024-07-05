@@ -1,6 +1,10 @@
-#include <stdio.h>
+// Token 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
 
-void app_main(void)
-{
+#include <stdio.h>
+#include "sensor-task.h"
+
+void app_main(void) {
+
+	init_sensor();
 
 }
