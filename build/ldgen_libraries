@@ -59,8 +59,8 @@
 /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/perfmon/libperfmon.a
 /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/spiffs/libspiffs.a
 /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
-/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/bme280/libbme280.a
-/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/main/libmain.a
+/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/bmx280/libbmx280.a
 /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/debug-colors/libdebug-colors.a
-/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/gpio-mestria/libgpio-mestria.a
 /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/i2c-mestria/libi2c-mestria.a
+/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/main/libmain.a
+/home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/gpio-mestria/libgpio-mestria.a

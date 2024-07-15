@@ -1,0 +1,201 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB1 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m2024-07-15 09:19:10 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:10 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:10 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:10 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:10 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:10 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:10 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:10 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:10 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:10 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:10 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:10 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:10 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:11 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:11 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:11 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:11 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:11 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:11 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:11 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:11 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:11 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:11 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:11 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:11 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:11 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:11 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:11 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:12 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:13 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:13 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:13 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:13 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:13 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:13 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:13 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:13 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:13 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:13 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:13 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:13 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:13 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:13 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:14 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:14 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:14 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:14 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:14 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:14 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:14 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:14 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:14 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:14 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:15 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:15 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:15 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:15 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:15 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:15 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:15 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:15 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:15 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:15 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:15 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:15 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:15 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:15 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:15 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:16 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:16 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:16 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:16 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:16 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:16 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:19:16 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:19:16 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:16 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:19:16 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:19:16 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:19:16 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:19:16 0x40080400: _init at ??:?
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33m2024-07-15 09:20:47 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:47 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:20:47 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:20:47 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:20:47 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:47 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:20:47 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:20:47 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:47 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:20:47 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:20:47 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:20:47 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:47 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:20:48 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:20:48 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:48 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:20:48 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:20:48 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:20:48 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:48 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:20:48 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:20:48 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:48 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:20:48 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:20:48 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:20:48 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:48 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-15 09:20:48 0x40081208: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-15 09:20:49 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:49 0x4008183a: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-15 09:20:49 0x400869fd: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-15 09:20:49 0x4008c166: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-15 09:20:49 0x4008910f: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:166
+[0m
+[0;33m2024-07-15 09:20:49 0x40080400: _init at ??:?
+[0m
+[0m

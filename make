@@ -8,7 +8,7 @@ import shutil # Permite manipulação de arquivos
 #? ===================================== CONSTANTES ===================================== #
 
 # Nome do projeto no CMakeLists
-PROJECT = "area-iot"
+PROJECT = "hub"
 
 # ID do usuário no sistema
 CURRENT_ID = str(os.getuid())

@@ -1,0 +1,24 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/mestria/work/firmwares/desenvolvimento/hub/build/bootloader/esp-idf/esptool_py && /home/mestria/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/mestria/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/mestria/work/firmwares/desenvolvimento/hub/build/bootloader/bootloader.bin
+Bootloader binary size 0x6870 bytes. 0x790 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sensor-task.c.obj
+../main/sensor-task.c: In function 'bme_280_task':
+../main/sensor-task.c:64:37: warning: initialization of 's8 (*)(u8,  u8,  u8 *, u8)' {aka 'signed char (*)(unsigned char,  unsigned char,  unsigned char *, unsigned char)'} from incompatible pointer type 'esp_err_t (*)(u8,  u8,  u8 *, u8)' {aka 'int (*)(unsigned char,  unsigned char,  unsigned char *, unsigned char)'} [-Wincompatible-pointer-types]
+   64 |                         .bus_read = BME280_I2C_bus_read,
+      |                                     ^~~~~~~~~~~~~~~~~~~
+../main/sensor-task.c:64:37: note: (near initialization for 'bme280.bus_read')
+../main/sensor-task.c: At top level:
+../main/sensor-task.c:4:20: warning: 'TAG' defined but not used [-Wunused-variable]
+    4 | static const char *TAG = "BME280";
+      |                    ^~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable main.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/mestria/work/firmwares/desenvolvimento/hub/build/main.bin
+[7/7] cd /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/esptool_py && /home/mestria/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/mestria/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/mestria/work/firmwares/desenvolvimento/hub/build/partition_table/partition-table.bin /home/mestria/work/firmwares/desenvolvimento/hub/build/main.bin
+main.bin binary size 0x37be0 bytes. Smallest app partition is 0x100000 bytes. 0xc8420 bytes (78%) free.

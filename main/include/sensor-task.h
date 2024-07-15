@@ -16,7 +16,15 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "soc/gpio_struct.h"
+#include "debug-colors.h"
 #include "i2c-mestria.h"
+#include "bmx280.h"
+
+
+/**
+ * @brief Clock do I2C
+*/
+#define I2C_MASTER_FREQ_HZ  100000
 
 void init_sensor();
 

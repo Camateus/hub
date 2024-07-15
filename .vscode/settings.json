@@ -2,6 +2,10 @@
     "files.associations": {
         "sensor-task.h": "c",
         "i2c-mestria.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "debug-colors.h": "c",
+        "bme280.h": "c",
+        "types.h": "c",
+        "bmx280.h": "c"
     }
 }

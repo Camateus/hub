@@ -1,0 +1,46 @@
+-- IDF_TARGET not set, using default target: esp32
+-- Found Git: /usr/bin/git (found version "2.25.1") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/mestria/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Check for working C compiler: /home/mestria/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Check for working C compiler: /home/mestria/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /home/mestria/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++
+-- Check for working CXX compiler: /home/mestria/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/mestria/work/firmwares/desenvolvimento/hub/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/mestria/.espressif/python_env/idf5.1_py3.8_env/bin/python (found version "3.8.10") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "main" version: 33130b1-dirty
+-- Adding linker script /home/mestria/work/firmwares/desenvolvimento/hub/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/mestria/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bme280 bootloader bootloader_support bt cmock console cxx debug-colors driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos gpio-mestria hal heap http_parser i2c-mestria idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/mestria/esp/esp-idf/components/app_trace /home/mestria/esp/esp-idf/components/app_update /home/mestria/work/firmwares/desenvolvimento/hub/components/bme280 /home/mestria/esp/esp-idf/components/bootloader /home/mestria/esp/esp-idf/components/bootloader_support /home/mestria/esp/esp-idf/components/bt /home/mestria/esp/esp-idf/components/cmock /home/mestria/esp/esp-idf/components/console /home/mestria/esp/esp-idf/components/cxx /home/mestria/work/firmwares/desenvolvimento/hub/components/debug-colors /home/mestria/esp/esp-idf/components/driver /home/mestria/esp/esp-idf/components/efuse /home/mestria/esp/esp-idf/components/esp-tls /home/mestria/esp/esp-idf/components/esp_adc /home/mestria/esp/esp-idf/components/esp_app_format /home/mestria/esp/esp-idf/components/esp_coex /home/mestria/esp/esp-idf/components/esp_common /home/mestria/esp/esp-idf/components/esp_eth /home/mestria/esp/esp-idf/components/esp_event /home/mestria/esp/esp-idf/components/esp_gdbstub /home/mestria/esp/esp-idf/components/esp_hid /home/mestria/esp/esp-idf/components/esp_http_client /home/mestria/esp/esp-idf/components/esp_http_server /home/mestria/esp/esp-idf/components/esp_https_ota /home/mestria/esp/esp-idf/components/esp_https_server /home/mestria/esp/esp-idf/components/esp_hw_support /home/mestria/esp/esp-idf/components/esp_lcd /home/mestria/esp/esp-idf/components/esp_local_ctrl /home/mestria/esp/esp-idf/components/esp_mm /home/mestria/esp/esp-idf/components/esp_netif /home/mestria/esp/esp-idf/components/esp_netif_stack /home/mestria/esp/esp-idf/components/esp_partition /home/mestria/esp/esp-idf/components/esp_phy /home/mestria/esp/esp-idf/components/esp_pm /home/mestria/esp/esp-idf/components/esp_psram /home/mestria/esp/esp-idf/components/esp_ringbuf /home/mestria/esp/esp-idf/components/esp_rom /home/mestria/esp/esp-idf/components/esp_system /home/mestria/esp/esp-idf/components/esp_timer /home/mestria/esp/esp-idf/components/esp_wifi /home/mestria/esp/esp-idf/components/espcoredump /home/mestria/esp/esp-idf/components/esptool_py /home/mestria/esp/esp-idf/components/fatfs /home/mestria/esp/esp-idf/components/freertos /home/mestria/work/firmwares/desenvolvimento/hub/components/gpio-mestria /home/mestria/esp/esp-idf/components/hal /home/mestria/esp/esp-idf/components/heap /home/mestria/esp/esp-idf/components/http_parser /home/mestria/work/firmwares/desenvolvimento/hub/components/i2c-mestria /home/mestria/esp/esp-idf/components/idf_test /home/mestria/esp/esp-idf/components/ieee802154 /home/mestria/esp/esp-idf/components/json /home/mestria/esp/esp-idf/components/log /home/mestria/esp/esp-idf/components/lwip /home/mestria/work/firmwares/desenvolvimento/hub/main /home/mestria/esp/esp-idf/components/mbedtls /home/mestria/esp/esp-idf/components/mqtt /home/mestria/esp/esp-idf/components/newlib /home/mestria/esp/esp-idf/components/nvs_flash /home/mestria/esp/esp-idf/components/openthread /home/mestria/esp/esp-idf/components/partition_table /home/mestria/esp/esp-idf/components/perfmon /home/mestria/esp/esp-idf/components/protobuf-c /home/mestria/esp/esp-idf/components/protocomm /home/mestria/esp/esp-idf/components/pthread /home/mestria/esp/esp-idf/components/sdmmc /home/mestria/esp/esp-idf/components/soc /home/mestria/esp/esp-idf/components/spi_flash /home/mestria/esp/esp-idf/components/spiffs /home/mestria/esp/esp-idf/components/tcp_transport /home/mestria/esp/esp-idf/components/ulp /home/mestria/esp/esp-idf/components/unity /home/mestria/esp/esp-idf/components/usb /home/mestria/esp/esp-idf/components/vfs /home/mestria/esp/esp-idf/components/wear_levelling /home/mestria/esp/esp-idf/components/wifi_provisioning /home/mestria/esp/esp-idf/components/wpa_supplicant /home/mestria/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mestria/work/firmwares/desenvolvimento/hub/build

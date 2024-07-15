@@ -22,8 +22,8 @@
 /**
  * @brief Pinos utilizados pelo I2C
 */
-#define I2C_MASTER_SDA_IO           15
-#define I2C_MASTER_SCL_IO           4
+#define I2C_MASTER_SDA_IO           21
+#define I2C_MASTER_SCL_IO           22
 
 /**
  * @brief Buffers utilizados apenas em modo de slave
