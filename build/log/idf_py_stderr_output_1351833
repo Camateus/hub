@@ -1,0 +1,94 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m2024-07-16 12:51:16 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-16 12:51:17 0x400814ac: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-16 12:51:30 0x400d6d37: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:24 (discriminator 1)
+[0m
+[0;33m2024-07-16 12:51:30 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m2024-07-16 12:51:30 0x40081b56: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-16 12:51:30 0x40090451: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-16 12:51:30 0x40095ce6: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-16 12:51:30 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+2024-07-16 12:51:30 0x400d6d37: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:24 (discriminator 1)
+2024-07-16 12:51:30 0x400d69d7: read_temperatura at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:76
+2024-07-16 12:51:30 0x400dd4da: ble_gatts_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:471
+2024-07-16 12:51:30 0x400dd55e: ble_gatts_chr_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:517
+2024-07-16 12:51:30 0x400e3c5a: ble_att_svr_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:454
+2024-07-16 12:51:30 0x400e470e: ble_att_svr_read_handle at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:529
+2024-07-16 12:51:30 0x400e4c72: ble_att_svr_rx_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:1588
+2024-07-16 12:51:30 0x400d7f51: ble_att_rx at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att.c:517
+2024-07-16 12:51:30 0x400d7de2: ble_hs_hci_evt_acl_process at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs_hci_evt.c:1178
+2024-07-16 12:51:30 0x400d73a1: ble_hs_process_rx_data_queue at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:243
+2024-07-16 12:51:30 0x400d73b3: ble_hs_event_rx_data at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:540
+2024-07-16 12:51:30 0x4012302b: npl_freertos_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/src/npl_os_freertos.c:451
+2024-07-16 12:51:30 0x40083c2e: ble_npl_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:185
+2024-07-16 12:51:30  (inlined by) nimble_port_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/nimble/src/nimble_port.c:279
+2024-07-16 12:51:30 0x400d69bf: host_task at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:237
+2024-07-16 12:51:30 0x40092c45: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m2024-07-16 12:51:30 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-16 12:51:31 0x400814ac: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-16 12:53:24 0x400d6cc4: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:12 (discriminator 1)
+[0m
+[0;33m2024-07-16 12:53:24 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m2024-07-16 12:53:24 0x40081b56: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-16 12:53:24 0x40090451: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-16 12:53:24 0x40095ce6: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-16 12:53:24 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+2024-07-16 12:53:24 0x400d6cc4: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:12 (discriminator 1)
+2024-07-16 12:53:24 0x400d69d7: read_temperatura at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:76
+2024-07-16 12:53:24 0x400dd4da: ble_gatts_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:471
+2024-07-16 12:53:24 0x400dd55e: ble_gatts_chr_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:517
+2024-07-16 12:53:24 0x400e3c5a: ble_att_svr_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:454
+2024-07-16 12:53:24 0x400e470e: ble_att_svr_read_handle at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:529
+2024-07-16 12:53:24 0x400e4c72: ble_att_svr_rx_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:1588
+2024-07-16 12:53:24 0x400d7f51: ble_att_rx at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att.c:517
+2024-07-16 12:53:24 0x400d7de2: ble_hs_hci_evt_acl_process at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs_hci_evt.c:1178
+2024-07-16 12:53:24 0x400d73a1: ble_hs_process_rx_data_queue at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:243
+2024-07-16 12:53:24 0x400d73b3: ble_hs_event_rx_data at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:540
+2024-07-16 12:53:24 0x4012302b: npl_freertos_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/src/npl_os_freertos.c:451
+2024-07-16 12:53:24 0x40083c2e: ble_npl_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:185
+2024-07-16 12:53:24  (inlined by) nimble_port_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/nimble/src/nimble_port.c:279
+2024-07-16 12:53:24 0x400d69bf: host_task at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:237
+2024-07-16 12:53:24 0x40092c45: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m2024-07-16 12:53:25 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-16 12:53:25 0x400814ac: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m2024-07-16 12:53:47 0x400d6cc4: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:12 (discriminator 1)
+[0m
+[0;33m2024-07-16 12:53:47 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m2024-07-16 12:53:47 0x40081b56: panic_abort at /home/mestria/esp/esp-idf/components/esp_system/panic.c:466
+2024-07-16 12:53:47 0x40090451: esp_system_abort at /home/mestria/esp/esp-idf/components/esp_system/port/esp_system_chip.c:84
+2024-07-16 12:53:47 0x40095ce6: abort at /home/mestria/esp/esp-idf/components/newlib/abort.c:38
+2024-07-16 12:53:47 0x40090447: _esp_error_check_failed at /home/mestria/esp/esp-idf/components/esp_system/esp_err.c:50
+2024-07-16 12:53:47 0x400d6cc4: get_temp_press at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/sensor-task.c:12 (discriminator 1)
+2024-07-16 12:53:47 0x400d69d7: read_temperatura at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:76
+2024-07-16 12:53:47 0x400dd4da: ble_gatts_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:471
+2024-07-16 12:53:47 0x400dd55e: ble_gatts_chr_val_access at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:517
+2024-07-16 12:53:47 0x400e3c5a: ble_att_svr_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:454
+2024-07-16 12:53:47 0x400e470e: ble_att_svr_read_handle at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:529
+2024-07-16 12:53:47 0x400e4c72: ble_att_svr_rx_read at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att_svr.c:1588
+2024-07-16 12:53:47 0x400d7f51: ble_att_rx at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_att.c:517
+2024-07-16 12:53:47 0x400d7de2: ble_hs_hci_evt_acl_process at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs_hci_evt.c:1178
+2024-07-16 12:53:47 0x400d73a1: ble_hs_process_rx_data_queue at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:243
+2024-07-16 12:53:47 0x400d73b3: ble_hs_event_rx_data at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:540
+2024-07-16 12:53:47 0x4012302b: npl_freertos_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/src/npl_os_freertos.c:451
+2024-07-16 12:53:47 0x40083c2e: ble_npl_event_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h:185
+2024-07-16 12:53:47  (inlined by) nimble_port_run at /home/mestria/esp/esp-idf/components/bt/host/nimble/nimble/porting/nimble/src/nimble_port.c:279
+2024-07-16 12:53:47 0x400d69bf: host_task at /home/mestria/work/firmwares/desenvolvimento/hub/build/../main/ble-task.c:237
+2024-07-16 12:53:47 0x40092c45: vPortTaskWrapper at /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m2024-07-16 12:53:47 0x40080400: _init at ??:?
+[0m
+[0;33m2024-07-16 12:53:47 0x400814ac: call_start_cpu1 at /home/mestria/esp/esp-idf/components/esp_system/port/cpu_start.c:159
+[0m
+[0m

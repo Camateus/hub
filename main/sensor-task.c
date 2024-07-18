@@ -1,35 +1,30 @@
 #include "sensor-task.h"
 
-TaskHandle_t bme_280_task_handle;
+uint16_t get_temp_press(void) {
+	bmx280_t *bmx280 = bmx280_create(I2C_NUM_0);
 
-static void bme_280_task(void *) {
-	while(1) {
-		bmx280_t *bmx280 = bmx280_create(I2C_NUM_0);
-
-		if(!bmx280) {
-			ESP_LOGE("test", "Could not create bmx280 driver.");
-			return;
-		}
-
-		ESP_ERROR_CHECK(bmx280_init(bmx280));
-
-		bmx280_config_t bmx_cfg = BMX280_DEFAULT_CONFIG;
-		ESP_ERROR_CHECK(bmx280_configure(bmx280, &bmx_cfg));
-
-		while(1) {
-			ESP_ERROR_CHECK(bmx280_setMode(bmx280, BMX280_MODE_FORCE));
-			do {
-				vTaskDelay(pdMS_TO_TICKS(1));
-			} while(bmx280_isSampling(bmx280));
-
-			float temp = 0, pres = 0, hum = 0;
-			ESP_ERROR_CHECK(bmx280_readoutFloat(bmx280, &temp, &pres, &hum));
-
-			ESP_LOGI("test", "Read Values: temp = %0.2f, pres = %0.2f", temp, pres);
-			vTaskDelay(pdMS_TO_TICKS(100));
-		}
-
+	if(!bmx280) {
+		ESP_LOGE("test", "Could not create bmx280 driver.");
+		while(1) {}
 	}
+
+	ESP_ERROR_CHECK(bmx280_init(bmx280));
+
+	bmx280_config_t bmx_cfg = BMX280_DEFAULT_CONFIG;
+	ESP_ERROR_CHECK(bmx280_configure(bmx280, &bmx_cfg));
+
+	ESP_ERROR_CHECK(bmx280_setMode(bmx280, BMX280_MODE_FORCE));
+
+	do {
+		vTaskDelay(pdMS_TO_TICKS(1));
+	} while(bmx280_isSampling(bmx280));
+
+	float temp = 0, pres = 0, hum = 0;
+	ESP_ERROR_CHECK(bmx280_readoutFloat(bmx280, &temp, &pres, &hum));
+
+	LOG_GREEN(__func__, "Read Values: temp = %d, pres = %0.2f", (uint16_t)temp, pres);
+
+	return (uint16_t)temp;
 }
 
 void init_sensor() {
@@ -44,18 +39,12 @@ void init_sensor() {
 
 	i2c_master_init(conf, I2C_NUM_0);
 
+	// while (1)
+	// {
+	// 	get_temp_press();
+	// 	vTaskDelay(pdMS_TO_TICKS(100));
+	// }
+	
 
-	// Criação da task de leitura dos pinos de entrada
-	esp_err_t bme_280_init_error = xTaskCreatePinnedToCore(bme_280_task, // Função que implementa a task
-	                                                       "bme_280_task", // Nome da task
-	                                                       48000, // Tamanho da memória stack
-	                                                       NULL, // Parâmetros de entrada da função
-	                                                       5, // Prioridade da task
-	                                                       &bme_280_task_handle, // Handle da task
-	                                                       0); // Núcleo onde a task será executada
 
-	if(bme_280_init_error != pdTRUE) {
-		LOG_RED(__func__, "Erro ao criar a task de envio da telemetria");
-		esp_restart();
-	}
 }

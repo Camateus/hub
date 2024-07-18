@@ -6,6 +6,8 @@
         "debug-colors.h": "c",
         "bme280.h": "c",
         "types.h": "c",
-        "bmx280.h": "c"
+        "bmx280.h": "c",
+        "ble-task.h": "c",
+        "flash-memory-task.h": "c"
     }
 }

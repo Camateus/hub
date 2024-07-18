@@ -26,6 +26,9 @@
 */
 #define I2C_MASTER_FREQ_HZ  100000
 
+
+uint16_t get_temp_press(void);
+
 void init_sensor();
 
 #endif /* SENSOR_TASK */

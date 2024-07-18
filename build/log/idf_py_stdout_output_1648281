@@ -1,0 +1,12 @@
+2024-07-18 12:57:28 [0;32mI (13031) bmx280: Probing for BMP280/BME280 sensors on I2C 0[0m
+2024-07-18 12:57:28 [0;32mI (13031) bmx280: Probe success: address=ec, id=58[0m
+2024-07-18 12:57:28 [0;32mI (13041) bmx280: Reading out calibration values...[0m
+2024-07-18 12:57:28 [0;32mI (13041) bmx280: Read Low Bank.[0m
+2024-07-18 12:57:28 [0;32mI (13041) bmx280: Read High Bank.[0m
+2024-07-18 12:57:28 [0;32mI (13041) bmx280: Dumping calibration...[0m
+2024-07-18 12:57:28 [0;32mI (13051) bmx280: 9c 6b fd 68 18 fc 28 90 ca d6 d0 0b f6 11 61 00 [0m
+2024-07-18 12:57:28 [0;32mI (13051) bmx280: f9 ff 8c 3c f8 c6 70 17 17 00 00 00 00 00 00 00 [0m
+2024-07-18 12:57:28 [0;32mI (13061) bmx280: 00 00 00 00 [0m
+2024-07-18 12:57:28 [0;32mMES (00:00:12.718) get_temp_press: Read Values: temp = 26, pres = 76385.52[0m
+2024-07-18 12:57:28 [0;35mMES (00:00:12.724) BLE - Leitura: Tempo de envio do central -> 0[0m
+2024-07-18 12:57:28 [0;35mMES (00:00:12.730) BLE - Leitura 2 : Tempo de envio do central -> 0[0m

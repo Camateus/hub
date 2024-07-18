@@ -6,6 +6,7 @@
 // Bibliotecas nativas do C
 #include <stdio.h>
 #include <stdlib.h>
+#include "stdint.h"
 #include <math.h>
 #include <string.h>
 
@@ -24,17 +25,17 @@
 #include "nimble/ble.h"
 #include "nimble/nimble_port.h"
 #include "nimble/nimble_port_freertos.h"
-#include "nvs_flash.h"
 // #include "sdkconfig.h"
 #include "services/gap/ble_svc_gap.h"
 #include "services/gatt/ble_svc_gatt.h"
-#include "flash-memory-task.h"
-#include "treat-data-task.h"
-#include "util.h"
+#include "sensor-task.h"
+#include "nvs_flash.h"
 
 //? =================================== CONSTANTES =======================================
 
 typedef uint16_t time_envio_t;
+
+#define TAM_MAX_NUM_SERIE 5
 
 /**
  * @brief Tempo (em microssegundos) sem interação via Bluetooth para que ele seja desligado
@@ -150,6 +151,6 @@ void check_ble_to_sleep(void);
  */
 void init_ble_communication(void);
 
-flag_t get_ble_ligado(void);
+bool get_ble_ligado(void);
 
 #endif /* BLE_TASK_H */

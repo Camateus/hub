@@ -4,9 +4,6 @@
 #include "esp_phy_init.h"
 
 //? ============================ VARIAVEIS GLOBAIS =========================== */
-// Handle de conexão BLE
-
-extern TaskHandle_t receive_task_handle;
 
 // Tipo de endereço BLE
 static ble_addr_type_t ble_addr_type;
@@ -14,12 +11,11 @@ static ble_addr_type_t ble_addr_type;
 conn_handle_t conn_handle;
 
 // Flag para indicar se o Bluetooth está ligado
-static flag_t ble_ligado = false;
+static bool ble_ligado = false;
 
 // Timer para armazenar o tempo que recebeu a útlima mensagem no Bluetooth
 static timeout_t ultima_msg_ble_time = 0;
 
-bool dispositivo_conectado = 0;
 //? ========================== DECLARAÇÃO DE FUNÇÕES ========================= */
 
 /**
@@ -54,14 +50,6 @@ conn_handle_t get_conn_handle(void) {
 	return conn_handle;
 }
 
-/**
- * @brief Obtém o estado atual da flag que indica se o BLE está ligado.
- *
- * @return O valor da flag `ble_ligado`.
- */
-flag_t get_ble_ligado(void) {
-	return ble_ligado;
-}
 
 //? =========================== CALLBACKS - CARACTERISTICAS ==============================/
 
@@ -75,56 +63,65 @@ flag_t get_ble_ligado(void) {
  *
  * @return (int) 0 para indicar sucesso.
  */
-static int read_write_tempo_envio_rastreador(uint16_t conn_handle,
-                                             uint16_t attr_handle,
-                                             struct ble_gatt_access_ctxt *ctxt,
-                                             void *arg) {
+static int read_temperatura(uint16_t conn_handle,
+                            uint16_t attr_handle,
+                            struct ble_gatt_access_ctxt *ctxt,
+                            void *arg) {
 
 	// Verifica se recebeu um request para leitura da característica
 	if(ctxt->op == BLE_GATT_ACCESS_OP_READ_CHR) {
-		time_envio_t tempo_local = get_send_time_central();
+		uint16_t temperatura = get_temp_press();
+		LOG_PURPLE("BLE - Leitura", "Tempo de envio do central -> %d", temperatura);
 
 		// Preenche o buffer de resposta com os dados desejados
-		os_mbuf_append(ctxt->om, (const void *)&tempo_local, sizeof(uint16_t));
-
-		LOG_PURPLE("BLE - Leitura", "Tempo de envio do central -> %d", tempo_local);
-
-
-	} // Verifica se recebeu um novo valor para a característica
-	else if(ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
-
-		// Verifica se o dado recebido cabe na variável desejada
-		if(ctxt->om->om_len == sizeof(time_envio_t)) {
-
-			// Variável auxiliar para armazenar o valor recebido
-			time_envio_t time_aux = 0;
-
-			// Copia o conteúdo do array recebido (little-endian) em número inteiro
-			memcpy(&time_aux, ctxt->om->om_data, ctxt->om->om_len);
-
-			if(time_aux > 15) {
-				// Define o novo valor do tempo de envio
-				save_time_on_flash(time_aux);
-
-				// Verifica se a flag de debug está habilitada
-				LOG_CYAN("BLE - Escrita", "Tempo de envio do central -> %d", time_aux);
-
-			}
-			else {
-				// Verifica se a flag de debug está habilitada
-				LOG_CYAN("BLE - Escrita", "Tempo deve ter mais que 15 minutos");
-
-			}
+		os_mbuf_append(ctxt->om, (const void *)&temperatura, sizeof(uint16_t));
+		LOG_PURPLE("BLE - Leitura 2 ", "Tempo de envio do central -> %d", temperatura);
 
 
-		}
+
 	}
-	// Atualiza o tempo da última interação pelo Bluetooth
-	ultima_msg_ble_time = esp_timer_get_time();
 
 	// Retorna 0 para indicar sucesso.
 	return 0;
 }
+
+static int write_rele_1(uint16_t conn_handle,
+                        uint16_t attr_handle,
+                        struct ble_gatt_access_ctxt *ctxt,
+                        void *arg) {
+
+	// Verifica se recebeu um novo valor para a característica
+	if(ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
+		// Verifica se o dado recebido cabe na variável desejada
+		if(ctxt->om->om_len == sizeof(bool)) {
+			// inverte_rele_1();
+
+		}
+	}
+
+	// Retorna 0 para indicar sucesso.
+	return 0;
+}
+
+static int write_rele_2(uint16_t conn_handle,
+                        uint16_t attr_handle,
+                        struct ble_gatt_access_ctxt *ctxt,
+                        void *arg) {
+
+	// Verifica se recebeu um novo valor para a característica
+	if(ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
+		// Verifica se o dado recebido cabe na variável desejada
+		if(ctxt->om->om_len == sizeof(bool)) {
+			// inverte_rele_2();
+
+		}
+	}
+
+	// Retorna 0 para indicar sucesso.
+	return 0;
+}
+
+
 
 //? ==================================== SERVIÇOS ========================================
 
@@ -137,10 +134,22 @@ static const struct ble_gatt_svc_def gatt_svcs[] = {
 		// Características do serviço primário
 		.characteristics = (struct ble_gatt_chr_def[]) {
 			{
-				//* --------- Característica 1 - Tempo de envio do central
+				//* --------- Característica 1 - Temperatura
 				.uuid = BLE_UUID16_DECLARE(0xA101), // Define o UUID da característica
-				.flags = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_WRITE, // Modo da cacterística
-				.access_cb = read_write_tempo_envio_rastreador // Callback para enviar dado
+				.flags = BLE_GATT_CHR_F_READ, // Modo da cacterística
+				.access_cb = read_temperatura // Callback para enviar dado
+
+			}, {
+				//* --------- Característica 2 - Relé 1
+				.uuid = BLE_UUID16_DECLARE(0xA102), // Define o UUID da característica
+				.flags = BLE_GATT_CHR_F_WRITE, // Modo da cacterística
+				.access_cb = write_rele_1 // Callback para enviar dado
+
+			}, {
+				//* --------- Característica 3 - Relé 2
+				.uuid = BLE_UUID16_DECLARE(0xA101), // Define o UUID da característica
+				.flags = BLE_GATT_CHR_F_WRITE, // Modo da cacterística
+				.access_cb = write_rele_2 // Callback para enviar dado
 
 			},
 			// Terminador do array de características
@@ -169,7 +178,6 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg) {
 		// Evento de conexão
 		case BLE_GAP_EVENT_CONNECT: {
 				LOG_YELLOW(__func__, "BLE - Evento de Conexao: %s", event->connect.status == 0 ? "OK!" : "FAILED!");
-				dispositivo_conectado = 1;
 
 				// Armazena o handle da conexão
 				conn_handle = event->connect.conn_handle;
@@ -183,7 +191,6 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg) {
 		// Evento de desconexão
 		case BLE_GAP_EVENT_DISCONNECT: {
 				LOG_YELLOW(__func__, "BLE - Evento de Desconexao");
-				dispositivo_conectado = 0;
 				// Volta o handle da conexão para um valor padrão, indicando que não há dispositivos conectados
 				conn_handle = CONN_HANDLE_DEFAULT;
 
@@ -403,7 +410,7 @@ void init_ble_communication(void) {
 
 	// String para armazenar o tempo de envio do equipamento para exibir no Bluetooth
 	char num_serie[TAM_MAX_NUM_SERIE] = {};
-	sprintf(num_serie, "MES-CENT.");
+	sprintf(num_serie, "HUB.");
 
 	// Define o nome do dispositivo no serviço GAP
 	ble_svc_gap_device_name_set((const char *)num_serie);

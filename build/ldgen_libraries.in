@@ -33,6 +33,7 @@ $<TARGET_FILE:__idf_esp_netif>
 $<TARGET_FILE:__idf_wpa_supplicant>
 $<TARGET_FILE:__idf_esp_coex>
 $<TARGET_FILE:__idf_esp_wifi>
+$<TARGET_FILE:__idf_bt>
 $<TARGET_FILE:__idf_unity>
 $<TARGET_FILE:__idf_cmock>
 $<TARGET_FILE:__idf_console>
@@ -62,5 +63,6 @@ $<TARGET_FILE:__idf_wifi_provisioning>
 $<TARGET_FILE:__idf_bmx280>
 $<TARGET_FILE:__idf_debug-colors>
 $<TARGET_FILE:__idf_i2c-mestria>
+$<TARGET_FILE:__idf_flash-mestria>
 $<TARGET_FILE:__idf_main>
 $<TARGET_FILE:__idf_gpio-mestria>
