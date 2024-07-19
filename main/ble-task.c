@@ -3,6 +3,7 @@
 #include "esp_nimble_hci.h"
 #include "esp_phy_init.h"
 
+
 //? ============================ VARIAVEIS GLOBAIS =========================== */
 
 // Tipo de endereço BLE
@@ -94,7 +95,7 @@ static int write_rele_1(uint16_t conn_handle,
 	if(ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
 		// Verifica se o dado recebido cabe na variável desejada
 		if(ctxt->om->om_len == sizeof(bool)) {
-			// inverte_rele_1();
+			inverte_rele_1();
 
 		}
 	}
@@ -112,7 +113,7 @@ static int write_rele_2(uint16_t conn_handle,
 	if(ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
 		// Verifica se o dado recebido cabe na variável desejada
 		if(ctxt->om->om_len == sizeof(bool)) {
-			// inverte_rele_2();
+			inverte_rele_2();
 
 		}
 	}

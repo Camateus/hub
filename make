@@ -8,7 +8,7 @@ import shutil # Permite manipulação de arquivos
 #? ===================================== CONSTANTES ===================================== #
 
 # Nome do projeto no CMakeLists
-PROJECT = "hub"
+PROJECT = "controle-quarto"
 
 # ID do usuário no sistema
 CURRENT_ID = str(os.getuid())

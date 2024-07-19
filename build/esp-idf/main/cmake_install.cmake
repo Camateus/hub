@@ -1,4 +1,4 @@
-# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/hub/main
+# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/controle-quarto/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

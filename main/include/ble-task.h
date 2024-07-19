@@ -29,6 +29,7 @@
 #include "services/gap/ble_svc_gap.h"
 #include "services/gatt/ble_svc_gatt.h"
 #include "sensor-task.h"
+#include "io-task.h"
 #include "nvs_flash.h"
 
 //? =================================== CONSTANTES =======================================

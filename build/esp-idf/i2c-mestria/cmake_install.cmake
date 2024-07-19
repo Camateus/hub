@@ -1,4 +1,4 @@
-# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/hub/components/i2c-mestria
+# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/controle-quarto/components/i2c-mestria
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

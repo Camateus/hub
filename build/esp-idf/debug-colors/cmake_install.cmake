@@ -1,4 +1,4 @@
-# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/hub/components/debug-colors
+# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/controle-quarto/components/debug-colors
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

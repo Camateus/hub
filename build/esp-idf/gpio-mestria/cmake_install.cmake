@@ -1,4 +1,4 @@
-# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/hub/components/gpio-mestria
+# Install script for directory: /home/mestria/work/firmwares/desenvolvimento/controle-quarto/components/gpio-mestria
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

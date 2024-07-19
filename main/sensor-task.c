@@ -41,10 +41,10 @@ void init_sensor() {
 
 	// while (1)
 	// {
-	// 	get_temp_press();
-	// 	vTaskDelay(pdMS_TO_TICKS(100));
+	//  get_temp_press();
+	//  vTaskDelay(pdMS_TO_TICKS(100));
 	// }
-	
+
 
 
 }
