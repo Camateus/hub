@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "controle-quarto",
-    "project_version":    "cc39e2a-dirty",
+    "project_version":    "7e0eeab-dirty",
     "project_path":       "/home/mestria/work/firmwares/desenvolvimento/controle-quarto",
     "idf_path":           "/home/mestria/esp/esp-idf",
     "build_dir":          "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build",

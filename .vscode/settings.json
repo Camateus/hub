@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "sensor-task.h": "c",
+        "i2c-mestria.h": "c"
+    }
+}

@@ -71,11 +71,11 @@ static int read_temperatura(uint16_t conn_handle,
 
 	// Verifica se recebeu um request para leitura da característica
 	if(ctxt->op == BLE_GATT_ACCESS_OP_READ_CHR) {
-		uint16_t temperatura = get_temp_press();
+		uint8_t temperatura = get_temp_press();
 		LOG_PURPLE("BLE - Leitura", "Tempo de envio do central -> %d", temperatura);
 
 		// Preenche o buffer de resposta com os dados desejados
-		os_mbuf_append(ctxt->om, (const void *)&temperatura, sizeof(uint16_t));
+		os_mbuf_append(ctxt->om, (const void *)&temperatura, sizeof(uint8_t));
 		LOG_PURPLE("BLE - Leitura 2 ", "Tempo de envio do central -> %d", temperatura);
 
 
