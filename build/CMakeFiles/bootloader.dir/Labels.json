@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/CMakeFiles/bootloader"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/CMakeFiles/bootloader.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "C:/Espressif/frameworks/esp-idf-v5.2.2/hub/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

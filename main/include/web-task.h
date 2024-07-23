@@ -1,5 +1,5 @@
-#ifndef WEB_TASK
-#define WEB_TASK
+#ifndef WEB_TASK_H
+#define WEB_TASK_H
 
 // ?================================= HEADERS =================================
 
@@ -26,13 +26,12 @@
 #include "sensor-task.h"
 #include "io-task.h"
 
-// --- Macros ---
-#define WIFI_SSID "YOUR SSID"                             //insira entre aspas o nome de sua rede wifi
-#define WIFI_PASS "YOUR WIFI PASSWORD"                    //insira entre aspas a sua senha wifi
+// Definições de rede Wi-Fi
+#define WIFI_SSID "CASA859"         // Nome da rede Wi-Fi
+#define WIFI_PASS "87654321"        // Senha da rede Wi-Fi
 
-
+// Prototipos das funções
 const char *generate_html_page(const char *temperatura);
+void init_web_interface(void);
 
-void init_web_interface();
-
-#endif /* WEB_TASK */
+#endif /* WEB_TASK_H */

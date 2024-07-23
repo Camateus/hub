@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
-import subprocess # Permite executar processos no sistema
-import sys # Permite acesso a variáveis e caminhos do ambiente
-import os # Permite utilizar recursos dependentes do sistema operacional
-import shutil # Permite manipulação de arquivos
+import subprocess  # Permite executar processos no sistema
+import sys  # Permite acesso a variáveis e caminhos do ambiente
+import os  # Permite utilizar recursos dependentes do sistema operacional
+import shutil  # Permite manipulação de arquivos
+
+# Certifique-se de ter o módulo pyserial instalado
+# pip install pyserial
 
 #? ===================================== CONSTANTES ===================================== #
 
@@ -11,11 +14,11 @@ import shutil # Permite manipulação de arquivos
 PROJECT = "controle-quarto"
 
 # ID do usuário no sistema
-CURRENT_ID = str(os.getuid())
+CURRENT_ID = os.getlogin()
 os.environ['CURRENT_ID'] = CURRENT_ID
 
 # Porta USB disponível para gravação
-DEVICE_USB_PORT = "/dev/ttyUSB0" # Valor padrão
+DEVICE_USB_PORT = "COM3"  # Valor padrão para Windows
 
 # Flag indicando se a gravação será feita utilizando o Docker
 DOCKER_INSTALLED = False
@@ -36,11 +39,9 @@ def build_project() -> None:
     # -----------------
 
     # Obtém o diretório completo atual
-    current_dir = subprocess.check_output(["pwd"])
-    # Obtém apenas o diretório onde o código está
-    current_dir = os.path.basename(os.path.normpath(current_dir[:-1]))
-    # Converte o byte array obtido em string
-    current_dir = current_dir.decode()
+    current_dir = os.getcwd()
+    # Substitui os separadores de caminho por hífens e remove caracteres inválidos para nome de arquivo
+    sanitized_dir = current_dir.replace("\\", "-").replace(":", "")
 
     # ---
 
@@ -77,7 +78,7 @@ def build_project() -> None:
     # ---
 
     # Monta o nome do arquivo compilado .bin
-    project_name = f"{PROJECT}-{current_dir}-{branch}-{version_commit}-{hash_commit}"
+    project_name = f"{PROJECT}-{sanitized_dir}-{branch}-{version_commit}-{hash_commit}"
     print("PROJECT_NAME: " + project_name)
 
     # ---
@@ -135,32 +136,16 @@ def interactive_project() -> None:
 def selec_serial_port() -> None:
     """Verifica as portas seriais disponíveis e permite ao usuário escolher qual utilizar"""
     
-    # Verifica todas as portas seriais disponíveis (USB e ACM)
-    ports = subprocess.check_output("ls /dev/ttyUSB*", shell=True).decode().split()
-    try:
-        ports += subprocess.check_output("ls /dev/ttyACM*", shell=True).decode().split()
-    except:
-        pass
-
-    # Cria uma lista com todas as portas em cores diferentes para cada uma
-    ports_list = "\n".join([f"{i+1} - \033[1;3{i+1}m{port}\033[0m" for i, port in enumerate(ports)])
-
-    # Aguarda o usuário escolher alguma das portas
+    import serial.tools.list_ports
+    ports = list(serial.tools.list_ports.comports())
+    ports_list = "\n".join([f"{i+1} - {port.device}" for i, port in enumerate(ports)])
     selected_port = input(f"Select the serial port to use:\n{ports_list}\n")
-
-    # Valida a porta escolhida
-    if not selected_port.isdigit() or int(selected_port) > len(ports_list) or int(selected_port) < 0:
-        print("Invalid input. the default port will be used (/dev/ttyUSB0).")
+    if not selected_port.isdigit() or int(selected_port) > len(ports) or int(selected_port) < 1:
+        print("Invalid input. The default port will be used (COM3).")
         return
-
-    # Obtém o nome da porta escolhida
-    selected_port = ports[int(selected_port) - 1]
-
-    print(f"Selected port: {selected_port}")
-
-    # Define a porta a ser usada nos comandos
     global DEVICE_USB_PORT
-    DEVICE_USB_PORT = selected_port
+    DEVICE_USB_PORT = ports[int(selected_port) - 1].device
+    print(f"Selected port: {DEVICE_USB_PORT}")
 
 #? ======================================== MAIN ======================================== #
 

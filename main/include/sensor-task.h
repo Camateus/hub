@@ -1,5 +1,5 @@
-#ifndef SENSOR_TASK
-#define SENSOR_TASK
+#ifndef SENSOR_TASK_H
+#define SENSOR_TASK_H
 
 // ?================================= HEADERS =================================
 
@@ -20,15 +20,11 @@
 #include "i2c-mestria.h"
 #include "bmx280.h"
 
-
-/**
- * @brief Clock do I2C
-*/
+// Definições para o clock do I2C
 #define I2C_MASTER_FREQ_HZ  100000
 
+// Prototipos das funções
+char *get_temp_press(void); // Atualizado para retornar um ponteiro para char
+void init_sensor(void);
 
-char get_temp_press(void);
-
-void init_sensor();
-
-#endif /* SENSOR_TASK */
+#endif /* SENSOR_TASK_H */

@@ -21,4 +21,5 @@ idf_component_register(SRCS "main.c"
                              
                     
                     INCLUDE_DIRS "./include"
-                     /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
+                     #/home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
+                     C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)

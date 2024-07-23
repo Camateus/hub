@@ -3,7 +3,6 @@
 #include "esp_nimble_hci.h"
 #include "esp_phy_init.h"
 
-
 //? ============================ VARIAVEIS GLOBAIS =========================== */
 
 // Tipo de endereço BLE
@@ -51,7 +50,6 @@ conn_handle_t get_conn_handle(void) {
 	return conn_handle;
 }
 
-
 //? =========================== CALLBACKS - CARACTERISTICAS ==============================/
 
 /**
@@ -77,8 +75,6 @@ static int read_temperatura(uint16_t conn_handle,
 		// Preenche o buffer de resposta com os dados desejados
 		os_mbuf_append(ctxt->om, (const void *)&temperatura, sizeof(uint8_t));
 		LOG_PURPLE("BLE - Leitura 2 ", "Tempo de envio do central -> %d", temperatura);
-
-
 
 	}
 
@@ -121,8 +117,6 @@ static int write_rele_2(uint16_t conn_handle,
 	// Retorna 0 para indicar sucesso.
 	return 0;
 }
-
-
 
 //? ==================================== SERVIÇOS ========================================
 

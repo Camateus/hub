@@ -4,7 +4,6 @@
 
 //? ============================ VARIÁVEIS GLOBAIS =========================== */
 
-
 //? ================================= FUNÇÕES ================================ */
 //* ============================= LEITURA ============================
 
@@ -38,10 +37,10 @@ esp_err_t read_general_info_variables(void) {
 
 	// // Lê o número de série do equipamento
 	// init_value_on_error(read_uint16_variables("variables", // Partição da flash onde ler a variável
-	//                                           "type_number", // Nome da variável na flash
-	//                                           &type_transmissor), // Variável onde armazenar a leitura
-	//                     clear_type_on_flash, // Função a ser chamada caso a leitura falhe
-	//                     "tipo do equipamento"); // Nome a ser exibido na mensagem de erro
+	// "type_number", // Nome da variável na flash
+	// &type_transmissor), // Variável onde armazenar a leitura
+	// clear_type_on_flash, // Função a ser chamada caso a leitura falhe
+	// "tipo do equipamento"); // Nome a ser exibido na mensagem de erro
 
 	// --------------------
 

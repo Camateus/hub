@@ -11,7 +11,6 @@
 
 ============================================================================ */
 
-
 const char *generate_html_page(const char *led1_status, const char *led2_status) {
 
 	// Partes estáticas do HTML
@@ -41,11 +40,10 @@ const char *generate_html_page(const char *led1_status, const char *led2_status)
 	                          "<button class=\"bts btOff\" onclick=\"location.href='/led?led2=off'\">Turn LED Off</button>") + strlen(
 	                       led2_status) + 1;
 
-	char *html_page = (char *)malloc(html_size);   //aloca memória dinâmica
+	char *html_page = (char *)malloc(html_size); //aloca memória dinâmica
 
 	if(html_page == NULL)
-		return NULL;                                //falha na alocação de memória
-
+		return NULL; //falha na alocação de memória
 
 	// Preenchendo a string HTML com o conteúdo dinâmico
 	snprintf(html_page, html_size,
@@ -63,14 +61,5 @@ const char *generate_html_page(const char *led1_status, const char *led2_status)
 
 } //end generate_html_page
 
-
-
-
 // ============================================================================
 // --- End interface.h ---
-
-
-
-
-
-

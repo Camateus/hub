@@ -271,7 +271,7 @@ static esp_err_t bmx280_calibrate(bmx280_t *bmx280) {
 #if !(CONFIG_BMX280_EXPECT_BMP280)
 
 #if CONFIG_BMX280_EXPECT_DETECT
-	if(bmx280_isBME(bmx280->chip_id))  // Only conditional for detect scenario.
+	if(bmx280_isBME(bmx280->chip_id)) // Only conditional for detect scenario.
 #endif
 	{
 		// First get H1 out of the way.
@@ -404,7 +404,6 @@ bool bmx280_isSampling(bmx280_t *bmx280) {
 		return false;
 }
 
-
 // LEGAL NOTE:
 // Any code between below the caption "// HERE BE DRAGONS" and above the caption
 // "// END OF DRAGONS" contains modified versions of code owned by Bosch
@@ -421,10 +420,10 @@ bool bmx280_isSampling(bmx280_t *bmx280) {
 int32_t BME280_compensate_T_int32(bmx280_t *bmx280, int32_t adc_T) {
 	int32_t var1, var2, T;
 	var1 = ((((adc_T >> 3) - ((int32_t)bmx280->cmps.T1 << 1))) * ((int32_t)bmx280->cmps.T2)) >> 11;
-	var2  = (((((adc_T >> 4) - ((int32_t)bmx280->cmps.T1)) * ((adc_T >> 4) - ((int32_t)bmx280->cmps.T1))) >> 12) * ((
-	                                                                                                                    int32_t)bmx280->cmps.T3)) >> 14;
+	var2 = (((((adc_T >> 4) - ((int32_t)bmx280->cmps.T1)) * ((adc_T >> 4) - ((int32_t)bmx280->cmps.T1))) >> 12) * ((
+	                                                                                                                   int32_t)bmx280->cmps.T3)) >> 14;
 	bmx280->t_fine = var1 + var2;
-	T  = (bmx280->t_fine * 5 + 128) >> 8;
+	T = (bmx280->t_fine * 5 + 128) >> 8;
 	return T;
 }
 
@@ -433,10 +432,10 @@ int32_t BME280_compensate_T_int32(bmx280_t *bmx280, int32_t adc_T) {
 uint32_t BME280_compensate_P_int64(bmx280_t *bmx280, int32_t adc_P) {
 	int64_t var1, var2, p;
 	var1 = ((int64_t)bmx280->t_fine) - 128000;
-	var2 = var1 * var1 * (int64_t)bmx280->cmps.P6;
+	var2 = var1 *var1 * (int64_t)bmx280->cmps.P6;
 	var2 = var2 + ((var1 * (int64_t)bmx280->cmps.P5) << 17);
 	var2 = var2 + (((int64_t)bmx280->cmps.P4) << 35);
-	var1 = ((var1 * var1 * (int64_t)bmx280->cmps.P3) >> 8) + ((var1 * (int64_t)bmx280->cmps.P2) << 12);
+	var1 = ((var1 *var1 * (int64_t)bmx280->cmps.P3) >> 8) + ((var1 * (int64_t)bmx280->cmps.P2) << 12);
 	var1 = (((((int64_t)1) << 47) + var1)) * ((int64_t)bmx280->cmps.P1) >> 33;
 	if(var1 == 0) {
 		return 0; // avoid exception caused by division by zero
