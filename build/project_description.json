@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "controle-quarto",
-    "project_version":    "7e0eeab-dirty",
+    "project_version":    "a95c845-dirty",
     "project_path":       "/home/mestria/work/firmwares/desenvolvimento/controle-quarto",
     "idf_path":           "/home/mestria/esp/esp-idf",
     "build_dir":          "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build",
@@ -860,13 +860,13 @@
             "dir": "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "bmx280", "debug-colors", "bt", "driver", "gpio-mestria", "i2c-mestria", "flash-mestria", "vfs", "nvs_flash", "esp_event" ],
+            "reqs": [ "bmx280", "debug-colors", "esp_http_server", "bt", "driver", "gpio-mestria", "i2c-mestria", "flash-mestria", "vfs", "nvs_flash", "esp_event" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/main.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/ble-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/flash-memory-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/io-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/sensor-task.c" ],
-            "include_dirs": [ "./include" ]
+            "sources": [ "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/main.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/ble-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/flash-memory-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/io-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/sensor-task.c", "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main/web-task.c" ],
+            "include_dirs": [ "./include", "/home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2133,11 +2133,11 @@
             "prefix": "idf",
             "dir": "/home/mestria/work/firmwares/desenvolvimento/controle-quarto/main",
             "lib": "__idf_main",
-            "reqs": [ "bmx280", "debug-colors", "bt", "driver", "gpio-mestria", "i2c-mestria", "flash-mestria", "vfs", "nvs_flash", "esp_event" ],
+            "reqs": [ "bmx280", "debug-colors", "esp_http_server", "bt", "driver", "gpio-mestria", "i2c-mestria", "flash-mestria", "vfs", "nvs_flash", "esp_event" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "./include" ]
+            "include_dirs": [ "./include", "/home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos" ]
         },
         "bmx280": {
             "alias": "idf::bmx280",

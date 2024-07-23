@@ -2,7 +2,8 @@
 
 bmx280_t *bmx280;
 
-uint8_t get_temp_press(void) {
+char get_temp_press(void) {
+	char temper[10];
 
 	ESP_ERROR_CHECK(bmx280_setMode(bmx280, BMX280_MODE_FORCE));
 	do {
@@ -14,8 +15,8 @@ uint8_t get_temp_press(void) {
 
 	ESP_LOGI("test", "Read Values: temp = %d, pres = %0.2f", (uint8_t)temp, pres);
 	vTaskDelay(pdMS_TO_TICKS(100));
-
-	return ((uint8_t)temp);
+	sprintf(temper, "%d", (uint8_t)temp);
+	return temper;
 }
 
 void init_sensor() {

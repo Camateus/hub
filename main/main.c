@@ -5,6 +5,7 @@
 #include "flash-memory-task.h"
 #include "ble-task.h"
 #include "io-task.h"
+#include "web-task.h"
 
 void app_main(void) {
 	init_flash_memory();

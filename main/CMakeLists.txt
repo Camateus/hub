@@ -8,6 +8,7 @@ idf_component_register(SRCS "main.c"
                     # ---
                     REQUIRES bmx280
                              debug-colors
+                             esp_http_server
                              bt
                              driver
                              gpio-mestria
@@ -19,4 +20,5 @@ idf_component_register(SRCS "main.c"
                  
                              
                     
-                    INCLUDE_DIRS "./include")
+                    INCLUDE_DIRS "./include"
+                     /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
