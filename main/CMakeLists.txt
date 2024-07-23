@@ -3,6 +3,7 @@ idf_component_register(SRCS "main.c"
                             "flash-memory-task.c"
                             "io-task.c"
                             "sensor-task.c"
+                            "web-task.c"
 
                     # ---
                     REQUIRES bmx280

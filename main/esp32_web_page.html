@@ -1,0 +1,73 @@
+<!-- html_header -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle Quarto</title>
+    <style>
+    .a{
+      border: 8px solid black;
+      padding: 10px;
+      margin: 25px;
+      border-radius: 10px;
+      width: fit-content;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      
+
+    }
+    html{
+      font-family: Tahoma;
+      margin: 0px auto;
+      text-align: center;
+      background-color: #FFFFFF;}
+
+    .bts{
+
+      border: none;
+      color: #FFFFFF;
+      padding: 14px 36px;
+      text-decoration: none;
+      font-size: 23px;
+      margin: 1.5px;
+      cursor: pointer;
+      font-family: Verdana;}
+
+    .btLED{
+      border-radius: 10px;
+      background-color: #0060ce; }
+
+    .btPIN{
+
+      border-radius: 10px;
+      background-color: #0060ce;}
+
+    </style>
+
+</head>
+
+<body class="a">
+
+    <h2>Controle Quarto</h2>
+	
+<!-- end html_header -->
+
+<!-- html_dynamic -->
+
+    <p><b>Temperatura: %s</b></p>
+
+    <p><b>Relés: %s</b></p>
+    <button class="bts btLED"  onclick="location.href='/led?led1=on'">Lâmpada</button>
+    <button class="bts btPIN" onclick="location.href='/led?led1=off'">Tomada</button>
+
+	
+<!-- end html_dynamic -->	
+
+<!-- html_footer -->
+    </body>
+
+    </html>
+	
+<!-- end html_footer -->
+	
+	

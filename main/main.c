@@ -15,4 +15,5 @@ void app_main(void) {
 
 	init_ble_communication();
 
+	init_web_interface();
 }
