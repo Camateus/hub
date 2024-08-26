@@ -4,6 +4,7 @@
         "i2c-mestria.h": "c",
         "io-task.h": "c",
         "stdio.h": "c",
-        "web-task.h": "c"
+        "web-task.h": "c",
+        "flash-memory-task.h": "c"
     }
 }

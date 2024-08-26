@@ -69,12 +69,11 @@ static int read_temperatura(uint16_t conn_handle,
 
 	// Verifica se recebeu um request para leitura da característica
 	if(ctxt->op == BLE_GATT_ACCESS_OP_READ_CHR) {
-		uint8_t temperatura = get_temp_press();
-		LOG_PURPLE("BLE - Leitura", "Tempo de envio do central -> %d", temperatura);
+		uint8_t temperatura = get_temp_press_int();
+		LOG_PURPLE("BLE - Leitura", "Temperatura -> %d graus", temperatura);
 
 		// Preenche o buffer de resposta com os dados desejados
 		os_mbuf_append(ctxt->om, (const void *)&temperatura, sizeof(uint8_t));
-		LOG_PURPLE("BLE - Leitura 2 ", "Tempo de envio do central -> %d", temperatura);
 
 	}
 
@@ -254,7 +253,7 @@ static void ble_app_advertise(void) {
 	fields.name = (uint8_t *)device_name;
 	fields.name_len = strlen(device_name);
 	fields.name_is_complete = 1;
-	fields.flags = 0xAB; // Flag para indicar que é um produto do tipo IoT Cargo
+	fields.flags = 0xBC; // Flag para indicar que é o sensor
 
 	// Configuração dos campos de avertising
 	ble_gap_adv_set_fields(&fields);

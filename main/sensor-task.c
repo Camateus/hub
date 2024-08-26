@@ -23,6 +23,18 @@ char *get_temp_press(void) {
 	return temper;
 }
 
+uint8_t get_temp_press_int(void) {
+	ESP_ERROR_CHECK(bmx280_setMode(bmx280, BMX280_MODE_FORCE));
+	do {
+		vTaskDelay(pdMS_TO_TICKS(1));
+	} while(bmx280_isSampling(bmx280));
+
+	float temp = 0, pres = 0, hum = 0;
+	ESP_ERROR_CHECK(bmx280_readoutFloat(bmx280, &temp, &pres, &hum));
+
+	return (uint8_t)temp;
+}
+
 void init_sensor(void) {
 	i2c_config_t conf = {
 		.mode = I2C_MODE_MASTER,

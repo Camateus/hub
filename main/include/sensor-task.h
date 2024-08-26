@@ -25,6 +25,9 @@
 
 // Prototipos das funções
 char *get_temp_press(void); // Atualizado para retornar um ponteiro para char
+
+uint8_t get_temp_press_int(void);
+
 void init_sensor(void);
 
 #endif /* SENSOR_TASK_H */

@@ -3,12 +3,12 @@ idf_component_register(SRCS "main.c"
                             "flash-memory-task.c"
                             "io-task.c"
                             "sensor-task.c"
-                            "web-task.c"
+                        #     "web-task.c"
 
                     # ---
                     REQUIRES bmx280
                              debug-colors
-                             esp_http_server
+                        #      esp_http_server
                              bt
                              driver
                              gpio-mestria
@@ -21,5 +21,6 @@ idf_component_register(SRCS "main.c"
                              
                     
                     INCLUDE_DIRS "./include"
-                     #/home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
-                     C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
+                #      /home/mestria/esp/esp-idf/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
+                #      C:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel-SMP/include/freertos)
+                )
