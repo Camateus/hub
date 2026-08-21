@@ -10,11 +10,11 @@ O firmware foi estruturado de forma modular utilizando **FreeRTOS** e o framewor
 
 ## Funcionalidades
 
-- ** Controle de Iluminação e Tomada:** Acionamento de relés para controle da luz principal e de uma tomada do quarto.
-- ** Monitoramento Climático:** Leitura de temperatura e pressão utilizando o sensor **BMX280** (BME280/BMP280) via barramento I2C.
-- ** Interface Web (Wi-Fi):** Servidor web embarcado com uma interface HTML responsiva para controle e visualização dos dados em tempo real pela rede local.
-- ** Controle via Bluetooth (BLE):** Suporte a Bluetooth Low Energy para acionamento local alternativo.
-- ** Memória Persistente:** Salva o último estado da luz e da tomada na memória Flash (NVS) do ESP32. Em caso de queda de energia, o sistema retorna ao estado anterior automaticamente.
+- **Controle de Iluminação e Tomada:** Acionamento de relés para controle da luz principal e de uma tomada do quarto.
+- **Monitoramento Climático:** Leitura de temperatura e pressão utilizando o sensor **BMX280** (BME280/BMP280) via barramento I2C.
+- **Interface Web (Wi-Fi):** Servidor web embarcado com uma interface HTML responsiva para controle e visualização dos dados em tempo real pela rede local.
+- **Controle via Bluetooth (BLE):** Suporte a Bluetooth Low Energy para acionamento local alternativo.
+- **Memória Persistente:** Salva o último estado da luz e da tomada na memória Flash (NVS) do ESP32. Em caso de queda de energia, o sistema retorna ao estado anterior automaticamente.
 
 ##  Arquitetura do Software
 
