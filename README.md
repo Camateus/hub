@@ -1,4 +1,4 @@
-# 🏠 Smart Room Hub - ESP32
+# Smart Room Hub - ESP32
 
 ![ESP-IDF](https://img.shields.io/badge/ESP--IDF-FreeRTOS-red)
 ![C](https://img.shields.io/badge/Language-C-blue)
