@@ -4,19 +4,19 @@
 ![C](https://img.shields.io/badge/Language-C-blue)
 ![Status](https://img.shields.io/badge/Status-Ativo-success)
 
-Um sistema completo de automação residencial baseado em **ESP32**, desenvolvido para controlar a iluminação e uma tomada inteligente do quarto, além de realizar o monitoramento contínuo de temperatura. 
+Um sistema de automação residencial baseado em **ESP32**, desenvolvido para controlar a iluminação e uma tomada inteligente do quarto, além de realizar o monitoramento contínuo de temperatura. 
 
 O firmware foi estruturado de forma modular utilizando **FreeRTOS** e o framework **ESP-IDF**, dividindo as responsabilidades em tarefas independentes para garantir alta performance e confiabilidade na automação de hardware.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- **💡 Controle de Iluminação e Tomada:** Acionamento de relés para controle da luz principal e de uma tomada do quarto.
-- **🌡️ Monitoramento Climático:** Leitura de temperatura e pressão utilizando o sensor **BMX280** (BME280/BMP280) via barramento I2C.
-- **🌐 Interface Web (Wi-Fi):** Servidor web embarcado com uma interface HTML responsiva para controle e visualização dos dados em tempo real pela rede local.
-- **📱 Controle via Bluetooth (BLE):** Suporte a Bluetooth Low Energy para acionamento local alternativo.
-- **💾 Memória Persistente:** Salva o último estado da luz e da tomada na memória Flash (NVS) do ESP32. Em caso de queda de energia, o sistema retorna ao estado anterior automaticamente.
+- ** Controle de Iluminação e Tomada:** Acionamento de relés para controle da luz principal e de uma tomada do quarto.
+- ** Monitoramento Climático:** Leitura de temperatura e pressão utilizando o sensor **BMX280** (BME280/BMP280) via barramento I2C.
+- ** Interface Web (Wi-Fi):** Servidor web embarcado com uma interface HTML responsiva para controle e visualização dos dados em tempo real pela rede local.
+- ** Controle via Bluetooth (BLE):** Suporte a Bluetooth Low Energy para acionamento local alternativo.
+- ** Memória Persistente:** Salva o último estado da luz e da tomada na memória Flash (NVS) do ESP32. Em caso de queda de energia, o sistema retorna ao estado anterior automaticamente.
 
-## 🛠️ Arquitetura do Software
+##  Arquitetura do Software
 
 O projeto é dividido em **Tasks do FreeRTOS** e **Componentes customizados**:
 
@@ -29,12 +29,12 @@ O projeto é dividido em **Tasks do FreeRTOS** e **Componentes customizados**:
 
 ### Componentes (`components/`)
 - `bmx280`: Driver para o sensor de temperatura/pressão.
-- `gpio-mestria`: Abstração para manipulação e configuração segura dos pinos de I/O.
-- `i2c-mestria`: Interface simplificada para comunicação I2C.
-- `flash-mestria`: Módulo dedicado para operações de leitura/escrita na memória Flash.
+- `gpio`: Abstração para manipulação e configuração segura dos pinos de I/O.
+- `i2C`: Interface simplificada para comunicação I2C.
+- `flash`: Módulo dedicado para operações de leitura/escrita na memória Flash.
 - `debug-colors`: Macros para formatação de logs coloridos no terminal, facilitando o debug da aplicação.
 
-## ⚙️ Hardware Necessário
+## Hardware Utilizado
 
 *   1x Placa de Desenvolvimento **ESP32**
 *   1x Módulo Relé de 2 Canais (para a luz e a tomada)
@@ -42,30 +42,6 @@ O projeto é dividido em **Tasks do FreeRTOS** e **Componentes customizados**:
 *   Fonte de alimentação (5V)
 *   Jumpers e protoboard ou placa de circuito impresso
 
-## 🚀 Como Executar
-
-### Pré-requisitos
-Certifique-se de ter o ambiente do [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/) configurado em sua máquina.
-
-### Instalação
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/SeuUsuario/NomeDoRepositorio.git
-   cd NomeDoRepositorio
-   ```
-
-2. Configure o projeto (menuconfig):
-   ```bash
-   idf.py menuconfig
-   ```
-   *(Configure as credenciais de Wi-Fi, pinos do I2C e dos relés, se necessário nas opções do projeto).*
-
-3. Compile, grave no ESP32 e abra o monitor serial:
-   ```bash
-   idf.py build flash monitor
-   ```
-
-## 👨‍💻 Autor
+## Autor
 
 Desenvolvido por **Mateus Giori Camargos**.
